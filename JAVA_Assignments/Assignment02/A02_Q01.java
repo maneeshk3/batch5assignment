@@ -23,7 +23,16 @@ class person
  System.out.println(name + '\n'+ age +'\n' + address);
  
  }
+public void setInfo(String name, int age, String address)
+ {
 
+ this.name= name;
+ this.age= age;
+ this.address= address;
+
+ System.out.println("values updated");
+
+ }
 public static void main (String args[])
 {
 person newperson1 = new person();
@@ -31,6 +40,8 @@ person newperson2 = new person("Maheen", 28, "maharashtra");
 
  newperson1.displayinfo();
  newperson2.displayinfo();
+ newperson1.setInfo("Khan", 30, "Hydrabad" );
+ newperson1.displayinfo();
  
 }
 }
