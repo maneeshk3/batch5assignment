@@ -1,0 +1,31 @@
+
+
+
+// 1.This cammand is used to display all the data from table Products
+
+select * from table Products;
+
+
+// 2.This cammand is used display the columns Product_name and price from the table Products
+
+select Product_name price from Products;
+
+//3.This query is used to get Product_name from Product Table where the name starts with A, B and C
+
+select * from Products where Product_name like 'A%' or Product_name like 'B%' or Produc_name like 'C%';
+
+// 4.This query is to get Products from the Products table where the price is between 100 and 500.
+
+select * from Products where Price between 100 and 500 --not include 100 & 500;
+
+//5.This query to find all the Products from Products table where the supplier is in ("Hyundai","Maruti","MRF","Honda")
+
+select * from Products where supplier in ('Hyundai','Maruti','MRF','Honda');
+
+//6.This query to find all the Products from the Products table where the Quantity is null
+
+select * from Products where  Quantity IS NULL;
+
+//7.This query is to find all the Products from the Product table where the Quantity is not null
+ select * from Products where Quantity IS NOT NULL;
+
