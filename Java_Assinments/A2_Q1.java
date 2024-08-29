@@ -1,6 +1,7 @@
-// Question 1.2: Second commit after adding this method to the code.
-// Create a method for the above class as setInfo(), accepting parameters(name, age, address)
-// and update the values of the instance variable in this method using this keyword.
+// Question 1.3: Thirs commit after adding this method to the code.
+// Add another method to the class Person, named as isAdult(), which return a boolean,
+// if the age of the person age is 18 or above. Create a object of this class, and call 
+// this method.
 import java.util.*;
 
 class person 
@@ -9,7 +10,7 @@ class person
 	String name, address;
 	person()
 	{			
-
+		System.out.println("Program to display and update person details..... \n ");
 	}
 	person(String n, int ag, String ad)
 	{	
@@ -27,6 +28,20 @@ class person
 		this.name = name;
 		this.age = age;
 		this.address = address;
+		System.out.println("Updated info\n ");
+	}
+	public boolean isAdult()
+	{
+		boolean flag = true;
+		if (age>=18)
+		{
+			flag=true;
+		}
+		else
+		{
+			flag= false;
+		}
+		return flag;
 	}
 	
 	public static void main(String[] args)
@@ -36,6 +51,8 @@ class person
 		obj2.displayInfo();
 		obj2.setInfo("musheer",24,"maharashtra");
 		obj2.displayInfo();
+		boolean flag = obj2.isAdult();
+		System.out.println("is adult?: " + flag);	
 	}
 	
 }
