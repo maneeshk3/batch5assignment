@@ -1,0 +1,157 @@
+1. Write a program to print the sum of Nth natural number, take the N as an input from the user.
+Hint, sum of nth natural number formula is (n * (n + 1) / 2), For user input go through Scanner class provided by java.
+
+import java.util.Scanner;
+public class SumOfNaturalNumber
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number :");
+		int num=sc.nextInt();
+		int sum=num * (num + 1) / 2;
+		System.out.print("Sum of nth natural number formula is "+sum);
+		
+	}
+}
+
+2. Take an int input from the user, and check if the input is a binary number or not.
+Hint, a binary number only has 1 or 0.
+
+import java.util.Scanner;
+public class isBinaryNumber
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter an integer :");
+	    String input=sc.nextLine();
+	    
+	    boolean isBinary = true;
+	    
+	    for(int i=0;i<=input.length()-1;i++){
+	        char c = input.charAt(i);
+	        if(c != '0' && c != '1'){
+	            isBinary =false;
+	            break;
+	        }
+	    }
+	    if(isBinary){
+	        System.out.println(input+" The number is Binary Number");
+	    }else{
+	        System.out.println(input+" The number is Not a Binary Number");
+	    }
+	    
+	sc.close();
+	}
+}
+
+3. Write a program to find if a given number is even or odd.
+Hint, a number is even if it's divisible by 2.
+
+import java.util.Scanner;
+public class EvenOdd
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter an integer :");
+	    int input=sc.nextInt();
+	    if(input/2==0){
+	        System.out.println(input+" The number is Even Number");
+	    }else{
+	        System.out.println(input+" The number is Odd Number");
+	    }
+	    
+	sc.close();
+	}
+}
+
+4. Write a program to swap int variable values with and without a temp variable.
+
+import java.util.Scanner;
+public class SwappingNumber
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter x value :");
+	    int x=sc.nextInt();
+	    System.out.print("Enter y value :");
+	    int y=sc.nextInt();
+	    x = x+y;
+	    y = x-y;
+	    x = x-y;
+	    System.out.println("After swapping x = "+x+","+" y = "+y);
+	    
+	sc.close();
+	}
+}
+
+5. Write a program to find the sum of all the numbers of a given digit.
+
+import java.util.Scanner;
+public class SumOfDigit
+{
+	public static void main(String[] args) {
+	    Scanner sc=new Scanner(System.in);
+	    System.out.print("Enter a Number :");
+	    int num=sc.nextInt();
+	    int sum=0;
+	    int temp=num;
+	    
+	    while(temp!=0){
+	        int digit =temp%10;
+	        sum+=digit;
+	        temp/=10;
+	    }
+	    System.out.print("sum of degit = "+sum);
+	    
+	    
+	sc.close();
+	}
+}
+
+6. Write a program to print n numbers of fibonacci series, n is the user input.
+
+import java.util.Scanner;
+public class Febonacci
+{
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter the number : ");
+		int num=sc.nextInt();
+		int x=0;
+		int y=1;
+	    System.out.print(x+","+y+",");
+		for(int i=2;i<=num;i++){
+		    	int z=x+y;
+	           	x=y;
+		        y=z;
+		      System.out.print(z+",");
+		}
+	}
+}
+7. Write a program to check if the given number is a prime number or not.
+Hint: a number is prime if it is only divisible by itself.
+
+import java.util.Scanner;
+public class CheckPrime
+{
+	public static void main(String[] args) {
+		System.out.println("Hello World");
+		Scanner sc=new Scanner(System.in);
+		System.out.print("Enter a number :");
+		int num=sc.nextInt();
+		int flag=0;
+		for(int i=2;i<=num/2;i++){
+		    if(num%i==0){
+		        flag++;
+		        break;
+		    }
+		}
+		if(flag==1){
+		    System.out.print(num+" Number is Not prime Number");
+		}else{
+		     System.out.print(num+" Number is a prime Number");
+		}
+		
+	}
+}
