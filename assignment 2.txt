@@ -1,0 +1,53 @@
+public class Person{
+    String name;
+    int age;
+    String address;
+    
+    public Person(){
+        
+        
+    }
+    
+    public Person(String name,int age,String address){
+        this.name=name;
+        this.age=age;
+        this.address=address;
+        
+    }
+    
+    public void setInfo(String name,int age,String address){
+        this.name=name;
+        this.age=age;
+        this.address=address;
+    }
+    
+    public boolean isAdult(){
+        return this.age>18;
+    }
+    public void displayInfo(){
+        System.out.println("name: "+name);
+        System.out.println("age: "+age);
+        System.out.println("address: "+address);
+        
+    }
+    
+    
+    public static void main(String[] args){
+        // System.out.println("default constructor values");
+        // Person per=new Person();
+        // System.out.println("before updating");
+        // per.displayInfo();
+        
+        // System.out.println("after updating");
+        // Person per1=new Person("rahul",25,"delhi");
+        // per1.displayInfo();
+        
+        // System.out.println("parameterized constructor values");
+        // Person per2=new Person("souvik",25,"Bhubaneswar");
+        // per2.displayInfo();
+        
+        Person per=new Person("souvik",25,"bhubaneswar");
+        boolean result=per.isAdult();
+        System.out.println("Is "+per.name+" is an adult?: " + result);
+    }
+}
