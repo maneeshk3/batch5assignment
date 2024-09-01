@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Document</title>
+    <style>
+        body{
+            font-family: helvetica, arial, sans-serif, Segoe UI, tahoma;
+            font-size: 11px;
+            font-style: normal;
+            font-weight: normal;
+            color: #464646;
+
+        }
+        .form {      
+            width: 90%;
+            margin: 0 auto;
+            border: 1px solid #ccc;
+            padding: 20px;
+            box-shadow: 0px 4px 8px rgba(0,0,0,0.1);
+
+        }
+        .buttons {
+            text-align: right;
+        }
+
+    </style>
+</head>
+<body>
+
+<div>
+    <h2>New Document</h2>
+    <div class="form">
+    <form>
+       
+        <div>
+            <label for="producte">Product: </label>
+            <input type="hidden"  name="team template" value="generated" readonly>
+            <span> productview Demo </span>
+        </div>
+        <br>
+        <div>
+            <label for="type">Type:</label>
+            <select id="type" name="type">
+                <option value="document">Document</option>
+                <option value="ecad">ECAD Data</option>
+                <option value="general">General</option>
+                <option value="minutes">Minutes</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="template">Template:</label>
+            <select id="template" name="template">
+                <option value="memo">Memo Template</option>
+                <option value="requirement">Requirement Template</option>
+            </select>
+        </div>
+        <hr>
+      
+        <div>
+            <label for="primaryContentSource">Primary Content Source:</label>
+            <select id="primaryContentSource" name="primaryContentSource">
+                <option value="localFile">Local File</option>
+                <option value="url">URL</option>
+                <option value="externalStorage">External Storage</option>
+            </select>
+        </div>
+        <br>
+        <div>
+            <label for="file">File Name:</label>
+            <input type="file" id="file" name="file">
+        </div>
+        <hr>
+        <br>
+        <div class="attributes">
+        <fieldset>
+                <legend><h3>Attributes</h3></legend>
+        <br>
+        <div >
+            <label for="number">Number:</label>
+            <input type="hidden"  name="number" value="generated" readonly>
+            <span> generated </span>
+        </div>
+
+        <br>
+        <div>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <br>
+        <div>
+            Description: <textarea name="desc" id="mydesc"></textarea>
+          
+        </div>
+        <br>
+        <div>
+            <label for="location">Location:</label>
+            <input type="radio" id="autoselect" name="location" value="autoselect"> Autoselect Folder (ProductView Demo)
+            
+            <input type="radio" id="selectFolder" name="location" value="selectFolder"> Select Folder (ProductView Demo)
+            <input type="file"  name="locfile">
+        </div>
+        <br>
+        <div>
+            <label for="life cycle Template">Life cycle Template:</label>    
+            <input type="hidden" id="life cycle Template" name="life cycle Template" value="generated" readonly>
+            <span> generated </span>
+        </div>
+        <br>
+        <div>
+            <label for="team template">Team template:</label>
+            <input type="hidden"  name="team template" value="generated" readonly>
+            <span> generated </span>
+        </div>
+    </fieldset>
+    </div>
+        <br>
+
+<div>
+    
+    <input type="checkbox"> keep checked out after checkin
+    
+</div>
+
+        <br>
+        <div class ="buttons">
+            <button type="button">Back</button>
+            <button type="submit">Next</button>
+            <button type="submit">Finish</button>
+            <button type="reset">Cancel</button>
+        </div>
+
+    </form>
+</div>
+</div>
+
+</body>
+</html>
+
