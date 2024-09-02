@@ -1,0 +1,51 @@
+Question 1 :
+Write a SQL query to select all data from a table named "Products"
+
+answer 1:
+
+		SELECT * FROM Products;
+
+Question 2 :
+Write a SQL query to select Product_Name, Price column from the Products Table.
+answer 2:
+
+		SELECT Product_Name, Price FROM Products;
+
+Question 3:
+Write a SQL query to find all Products from the Products table where Product_Name 
+starts with 'A', 'B', and 'C'.
+
+answer 3:
+
+		SELECT * FROM Products WHERE Product_Name LIKE 'A%' OR Product_Name LIKE 'B%' OR Product_Name LIKE 'C%';
+
+Question 4:
+Write a SQL query to find all Products from the Products table, where the price is 
+between 100 and 500.
+
+answer 4:
+	
+		SELECT * FROM Products WHERE price BETWEEN 100 AND 500;
+
+Question 5:
+Write a SQL query to find all the Products from Products table, where the supplier is 
+in ("Hyundai","Maruti","MRF","Honda").
+
+answer 5:
+
+		SELECT * FROM Products WHERE supplier IN ('Hyundai', 'Maruti', 'MRF', 'Honda');
+
+
+Question 6:
+Write a SQL query to find all the Products from the Product table, where the Quantity is null.
+
+answer 6:
+
+		SELECT * FROM Products WHERE Quantity IS NULL;
+
+Question 7:
+Write a SQL query to find all the Products from the Product table, where the Quantity is not null.
+
+answer 7:
+
+		SELECT * FROM Products;
