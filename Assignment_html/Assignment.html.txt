@@ -51,10 +51,10 @@
 
 <div class ="buttons">
             <button type="button">Back</button>
-            <button type="submit">Next</button>
-            <button type="submit">Finish</button>
-            <button type="Apply">Apply</button>
-            <button type="reset">Cancel</button>
+            <button type="button">Next</button>
+            <button type="button">Finish</button>
+            <button type="button">Apply</button>
+            <button type="button">Cancel</button>
         </div>
 
 </form>
