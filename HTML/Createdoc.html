@@ -13,6 +13,9 @@
             color: #464646;
 
         }
+        .required{
+            margin-right: 2px;
+        }
         .form {      
             width: 90%;
             margin: 0 auto;
@@ -35,13 +38,13 @@
     <form>
        
         <div>
-            <label for="producte">Product: </label>
+            <label for="producte"><span class="required">*</span>Product: </label>
             <input type="hidden"  name="team template" value="generated" readonly>
             <span> productview Demo </span>
         </div>
         <br>
         <div>
-            <label for="type">Type:</label>
+            <label for="type"><span class="required">*</span>Type:</label>
             <select id="type" name="type">
                 <option value="document">Document</option>
                 <option value="ecad">ECAD Data</option>
@@ -60,7 +63,7 @@
         <hr>
       
         <div>
-            <label for="primaryContentSource">Primary Content Source:</label>
+            <label for="primaryContentSource"><span class="required">*</span>Primary Content Source:</label>
             <select id="primaryContentSource" name="primaryContentSource">
                 <option value="localFile">Local File</option>
                 <option value="url">URL</option>
@@ -79,14 +82,14 @@
                 <legend><h3>Attributes</h3></legend>
         <br>
         <div >
-            <label for="number">Number:</label>
+            <label for="number"><span class="required">*</span>Number:</label>
             <input type="hidden"  name="number" value="generated" readonly>
             <span> generated </span>
         </div>
 
         <br>
         <div>
-            <label for="name">Name:</label>
+            <label for="name"><span class="required">*</span>Name:</label>
             <input type="text" id="name" name="name">
         </div>
         <br>
@@ -96,7 +99,7 @@
         </div>
         <br>
         <div>
-            <label for="location">Location:</label>
+            <label for="location"><span class="required">*</span>Location:</label>
             <input type="radio" id="autoselect" name="location" value="autoselect"> Autoselect Folder (ProductView Demo)
             
             <input type="radio" id="selectFolder" name="location" value="selectFolder"> Select Folder (ProductView Demo)
