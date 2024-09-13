@@ -1,0 +1,1 @@
+Write java program to print factorial of a number using recursion function.
