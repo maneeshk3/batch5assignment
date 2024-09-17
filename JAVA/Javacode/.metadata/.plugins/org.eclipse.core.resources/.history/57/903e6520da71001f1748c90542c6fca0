@@ -1,0 +1,22 @@
+package javacodeseries;
+
+public class StaticBlock {
+	private int x;
+	private String name;
+	
+	static {
+		int y=10;
+		String staticName="Static Block";
+		System.out.println("Ststic block executed");
+	}
+	public StaticBlock(int x,String name) {
+		this.x=x;
+		this.name=name;
+	}
+	public void updateInstanceVariables(int newX,String newName) {
+		x=newX;
+		
+		
+	}
+
+}

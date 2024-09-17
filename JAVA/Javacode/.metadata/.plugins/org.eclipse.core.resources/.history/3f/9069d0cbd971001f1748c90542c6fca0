@@ -1,0 +1,14 @@
+package javacodeseries;
+
+public class StaticBlock {
+	private int x;
+	private String name;
+	
+	static {
+		int y=10;
+		String staticName="Static Block";
+		System.out.println("Ststic block executed");
+		
+	}
+
+}
