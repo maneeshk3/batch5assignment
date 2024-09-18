@@ -1,7 +1,0 @@
-package javacodeseries;
-
-public class StaticBlock {
-	private int x;
-	
-
-}
