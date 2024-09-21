@@ -20,7 +20,7 @@ public Class Cat extends Animal{
         
         System.out.println("The cat sounds Meow");
 }
-
+public class AnimalTest {
 public static void main String[]args{
 	 Animal animal = new Animal();
         
@@ -30,12 +30,5 @@ public static void main String[]args{
         // Call the makeSound method on the cat instance
         cat.makeSound();
 		dog.makeSound();
-		
-	
-	
-	
-	
-	
-
-
+}
 }
