@@ -1,0 +1,21 @@
+Assignment Two Chapter 6
+
+Question 1.0: First commit should be with the below code.
+Create a Java Class 'Person', add some instance variables as name, age, address, etc
+Implement a default constructor and parameterized constructor to initialize the fields.
+Create a method displayInfo() to print the person details. Create Two object of this class
+using both the constructor
+
+Question 1.2: Second commit after adding this method to the code.
+Create a method for the above class as setInfo(), accepting parameters(name, age, address)
+and update the values of the instance variable in this method using this keyword.
+
+Question 1.3: Thirs commit after adding this method to the code.
+Add another method to the class Person, named as isAdult(), which return a boolean,
+if the age of the person age is 18 or above. Create a object of this class, and call 
+this method.
+
+Question 2.0:
+Please refer to the stack topic of the chapter 6 of the java book and implement a stack class
+with the relevant instance variable and methods. Create an object of this class
+and perform push() and pop() methods on this stack object.

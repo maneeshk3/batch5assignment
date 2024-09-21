@@ -1,0 +1,70 @@
+Question 1:
+Write a java program to create a class 'Calculator', that has methods
+such as multiply(), add(), subtract(), divide(), accepting two arguments
+both of them as int data type. Overload these methods which will be accepting
+two arguments of datatype double. In the main method showcase the use of these methods.
+
+Question 2:
+Write a Book class, having two constructors, showcasing constructor overloading,
+one constructor will take title, Author as arguments, the other constructor will
+take title, author and numberOfPages as arguments. Create objects of this class
+showcasing both the constructor usage.
+
+Question 3:
+Write a Rectangle class, having length and width as instance variable.
+Create a method isEqual(Rectangle rec) to check if the current rectangle is 
+equal to the other rectangle passed as an argument.
+
+Question 4:
+https://www.javatpoint.com/call-by-value-and-call-by-reference-in-java
+Go through the above article, Understand how a primitive datatype is stored in a variable
+and how are object, i.e Non-Primitive datatype is stored in a variable.
+Go through the example code shared in the article understand and impliment your own version of the same.
+
+Question 5:
+Write a java program to print fibonacci series using recursion fuction.
+Make sure you have following in your recursion function
+1. Base Case
+2. return statement and return type
+3. Method should call itself inside the method body.
+
+Question 6:
+Write java program to print factorial of a number using recursion function.
+
+Question 7:
+Create a Person class with Private attributes name, age, email address.
+Write a method which will set the values of these instance variable as these
+cant be access as Object.age etc...
+Write another method to print the values of these instance variable..
+Also try to udpate the name using Object.name = ''; and study the exception you get.
+
+Question 8:
+write a java class StaticBlock, Create a static block in the class which has some instance 
+variables, and also some instance variables out of the static block.
+Try to update the values of all the instane variable from a object, and check the values from the 
+object of the same class.
+Also update the values of the static block instance variable and non static instance variable from one 
+object and check the values from the other object. Note down your observation.
+
+Question 9:
+Write a java program to demonstrate the use of final keyword with variable, method
+and classes. Understand and study the difference b/w a final and a regular variable,
+methhod and classes.
+
+Question 10:
+Write a java class StringManupulation, which has methods to perform below actions
+	a. Count total numbers of characters.
+	b. Replace all occourances of a specific word,
+	c. Convert the sentence to upper case.
+	d. Reverse a string.
+	e. Find the longest word out of the sentence passed as argument. 
+	HINT : study the java String class, and go through the available methods.
+
+Question 11:
+Write a java method, which will take array of integers as input and will reverse 
+the elements in the array.
+
+Question 12:
+Write a final method in Calculator created above to get the LCM, HCF of varargs.
+go through the varargs topic in the Chapter 7 to understand what varargs is.
+
