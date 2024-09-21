@@ -1,0 +1,128 @@
+Java program for printing the sum of N natural numbers taking the input from the user.
+
+import java.util.*;
+public class SumofN
+{
+    public static void main(String args[])
+    {
+        int sum = 0;
+        Scanner sc  = new Scanner(System.in);
+        System.out.println("Enter the N number");
+        int N = sc.nextInt();
+        for(int i =1;i<=N;i++)
+        {
+            sum +=i; 
+        }
+        System.out.println("The sum of N natural number is" + sum);
+    }
+}
+
+Java program for Even or Odd
+
+import java.util.*;
+public class EvenOrOdd
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n = sc.nextInt();
+        if(n % 2 == 0)
+        {
+            System.out.println("The given number is Even number");
+        }
+        else
+        {
+            System.out.println("The given number is Odd number");
+        }
+    }
+}
+
+Java program for swaping to number
+
+import java.util.*;
+public class Swaping
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter first number");
+        int x = sc.nextInt();
+        System.out.println("Enter second number");
+        int y = sc.nextInt();
+        System.out.println("Before Swaping " + x + " "+ y);
+        x = x + y;
+        y = x - y;
+        x = x - y;
+        System.out.println("After Swaping " + x + " "+ y);
+    }
+}
+
+Java program for sum of the digits
+
+import java.util.*;
+public class SumOfDigit
+{
+    public static void main(String args[])
+    {
+        int digit, sum = 0;
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number");
+        int n =sc.nextInt();
+        while(n > 0)
+        {
+            digit = n % 10;
+            sum = sum + digit;
+            n = n / 10;
+        }
+        System.out.println("Sum of digits" + sum);
+    }
+}
+
+java program for fibonacci series
+
+import java.util.*;
+public class Fibonacci
+{
+    public static void main(String args[])
+    {
+        int n1=0, n2=1, n3;
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter n value");
+        int n = sc.nextInt();
+        for(int i = 0; i<=n;i++)
+        {
+            n3 = n1+n2;
+            System.out.println(n1 +" "+ n2 + " "+ n3);
+            n1 = n2;
+            n2 = n3;
+        }
+    }
+}
+
+2. Take an int input from the user, and check if the input is a binary number or not.
+Hint, a binary number only has 1 or 0.
+
+import java.util.*;
+public class BinaryChecker
+{
+    public static void main(String args[])
+    {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        String input = sc.nextLine();
+        if(isBinary(input)){
+            System.out.println("The number " + input + " is a binary number");
+            
+        }
+        else
+        {
+            System.out.println("The number " + input + " is not a binary number ");
+        }
+        sc.close();
+    }
+    public static boolean isBinary(String input)
+    {
+        return input.matches("[01]+");
+    }
+}
