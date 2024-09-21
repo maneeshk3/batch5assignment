@@ -1,0 +1,280 @@
+Assignment -2
+
+Question 1.0: First commit should be with the below code.
+Create a Java Class 'Person', add some instance variables as name, age, address, etc
+Implement a default constructor and parameterized constructor to initialize the fields.
+Create a method displayInfo() to print the person details. Create Two object of this class
+using both the constructor
+
+import java.util.*;
+public class Person{
+    String name;
+    int age;
+    String address;
+    public Person()
+    {
+        this.name = "Ashok";
+        this.age = 23;
+        this.address = "Banglore";
+       
+    }
+    public Person(String name, int age, String address)
+    {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void displayInfo()
+    {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+    }
+    public static void main(String args[])
+    {
+        Person p1 = new Person();
+        p1.displayInfo();
+        Person p2 = new Person();
+        p2.displayInfo();
+    }
+}
+
+2. Create a method for the above class as setInfo(), accepting parameters(name, age, address)
+and update the values of the instance variable in this method using this keyword.
+
+import java.util.*;
+public class Person{
+    String name;
+    int age;
+    String address;
+    public Person()
+    {
+        this.name = "Ashok";
+        this.age = 23;
+        this.address = "Banglore";
+       
+    }
+    public Person(String name, int age, String address)
+    {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void setInfo(String name, int age, String address)
+    {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void displayInfo()
+    {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+    }
+    public static void main(String args[])
+    {
+        Person p1 = new Person();
+        p1.setInfo("Reddy", 23, "Hyderabad");
+        p1.displayInfo();
+        Person p2 = new Person("Kumar", 23, "Banglore");
+        p2.displayInfo();
+    }
+}
+
+3 Add another method to the class Person, named as isAdult(), which return a boolean,
+if the age of the person age is 18 or above. Create a object of this class, and call
+this method.
+
+import java.util.*;
+public class Person{
+    String name;
+    int age;
+    String address;
+    public Person()
+    {
+        this.name = "Ashok";
+        this.age = 23;
+        this.address = "Banglore";
+       
+    }
+    public Person(String name, int age, String address)
+    {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void setInfo(String name, int age, String address)
+    {
+        this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+    public void displayInfo()
+    {
+        System.out.println("Name: " + name);
+        System.out.println("Age: " + age);
+        System.out.println("Address: " + address);
+    }
+    public boolean isAdult()
+    {
+        return this.age >= 18;
+    }
+    public static void main(String args[])
+    {
+        Person p1 = new Person();
+        p1.setInfo("Reddy", 23, "Hyderabad");
+        p1.displayInfo();
+        boolean isAdult = p1.isAdult();
+        System.out.println("Is " + p1.name + "an adult? " + isAdult);
+        Person p2 = new Person("Kumar", 23, "Banglore");
+        p2.displayInfo();
+        System.out.println("Is " + p2.name + " an adult? " + p2.isAdult());
+
+
+     }
+}
+
+4. Please refer to the stack topic of the chapter 6 of the java book and implement a stack class
+with the relevant instance variable and methods. Create an object of this class
+and perform push() and pop() methods on this stack object.
+
+import java.util.*;
+public class Stack
+{
+    int[] stackArray;
+    int top;
+    int maxSize;
+    public Stack(int size)
+    {
+        maxSize = size;
+        stackArray = new int[maxSize];
+        top = -1;
+    }
+    public void push(int value)
+    {
+        if(top < maxSize - 1)
+        {
+            stackArray[++top] = value;
+            System.out.println("Pushed " + value + "onto the stack.");
+        }
+        else
+        {
+            System.out.println("Stack overflow! Cannot push " + value);
+        }
+    }
+    public int pop()
+    {
+        if(top >= 0)
+        {
+            int value = stackArray[top--];
+            System.out.println("Popped " + value + " from the stack.");
+        }
+        else
+        {
+            System.out.println("Stack underflow! Cannot pop from an empty stack.");
+            //return -1;
+        }
+        return -1;
+    }
+    public boolean isEmpty()
+    {
+        return top == -1;
+    }
+    public void displayStack()
+    {
+        if(top >= 0)
+        {
+            System.out.println("Stack contents:");
+            for(int i=0; i<=top;i++)
+            {
+                System.out.println(stackArray[i]);
+            }
+        }
+        else
+        {
+            System.out.println("The stack is empty.");
+        }
+    }
+    public static void main(String args[])
+    {
+        Stack stack = new Stack(5);
+        stack.push(10);
+        stack.push(20);
+        stack.push(30);
+        stack.displayStack();
+        stack.pop();
+        stack.pop();
+        stack.displayStack();
+        stack.push(40);
+        stack.push(50);
+        stack.push(60);
+        stack.push(70);
+        stack.displayStack();
+    }
+}
+
+Write a java program to create a class 'Calculator', that has methods
+such as multiply(), add(), subtract(), divide(), accepting two arguments
+both of them as int data type. Overload these methods which will be accepting
+two arguments of datatype double. In the main method showcase the use of these methods.
+
+
+import java.util.*;
+class Calculator{
+    public int add(int a, int b)
+    {
+        return a + b;
+    }
+    public int subtract(int a, int b)
+    {
+        return a - b;
+    }
+    public int multiply(int a, int b)
+    {
+        return a * b;
+    }
+    public int divide(int a, int b)
+    {
+        if(b==0)
+        {
+            System.out.println("Error: Division by zero");
+            return 0;
+        }
+        return a / b;
+    }
+    public double subtract(double a, double b)
+    {
+        return a -b;
+    }
+    public double multiply(double a, double b)
+    {
+        return a * b;
+    }
+    public double divide(double a, double b)
+    {
+        if(b==0)
+        {
+            System.out.println("Error: Division by zero");
+            return 0.0;
+        }
+        return a / b;
+    }
+}
+public class Main
+{
+    public static void main(String args[])
+    {
+        Calculator calc = new Calculator();
+        System.out.println("Int operations:");
+        System.out.println("Addition: " + calc.add(10, 5));
+        System.out.println("Subtraction: " + calc.subtract(10, 5));
+        System.out.println("Multiplication: " + calc.multiply(10, 5));
+        System.out.println("Division: " + calc.divide(10, 5));
+        System.out.println("\nDouble operations:");
+        System.out.println("Addition: " + calc.add(10.5, 5.5));
+        System.out.println("Subtraction: " + calc.subtract(10.5, 5.5));
+        System.out.println("Multiplication: " + calc.multiply(10.5, 5.5));
+        System.out.println("Division: " + calc.divide(10.5, 5.5));
+    }
+}
