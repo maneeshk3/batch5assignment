@@ -52,5 +52,12 @@ public class Main {
         emp.showEmployeeName();
         manager.displayInfo();
         manager.showEmployeeName();
+        PersonInheri dy;
+        dy=person;
+        dy.displayInfo();
+        dy=emp;
+        dy.displayInfo();
+        dy=manager;
+        dy.displayInfo();
     }
 }
