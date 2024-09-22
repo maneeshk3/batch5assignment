@@ -1,0 +1,427 @@
+Question 2:
+Write a Book class, having two constructors, showcasing constructor overloading,
+one constructor will take title, Author as arguments, the other constructor will
+take title, author and numberOfPages as arguments. Create objects of this class
+showcasing both the constructor usage.
+
+public class Book{
+    
+    String title;
+    String author;
+    int pagenumbers;
+   
+    public Book(String title,String author){
+        this.title = title;
+        this.author = author;
+        this.pagenumbers = 0;
+    }
+    
+ 
+    public Book(String title,String author,int pagenumbers){
+        this.title = title;
+        this.author = author;
+        this.pagenumbers = pagenumbers;
+        
+    }
+    
+    public void printresult(){
+        System.out.println("Title: " + title);
+        System.out.println("Author: " + author);
+        System.out.println("Number of Pages: " + pagenumbers);
+        
+    }
+    
+    public static void main(String[] args) {
+		Book book1 = new Book("A","XYZ");
+		book1.printresult();
+		
+		Book book2 = new Book("B","PQR",360);
+		book2.printresult();
+		
+	}
+}
+
+
+
+
+
+Question 3:
+Write a Rectangle class, having length and width as instance variable.
+Create a method isEqual(Rectangle rec) to check if the current rectangle is 
+equal to the other rectangle passed as an argument.
+
+
+
+
+
+public class Rectangle{
+	
+	double length;
+	double width;
+	
+	Rectangle(double length,double width){
+		this.length = length;
+		this.width = width;
+	}
+	
+	public boolean isEqual(Rectangle rec){
+		return this.length==rec.length & this.width==rec.width;
+	}
+	
+	public static void main(String[] args){
+		Rectangle rec1 = new Rectangle(10.5,5.5);
+		Rectangle rec2 = new Rectangle(10.5,5.5);
+		System.out.println(rec1.isEqual(rec2));
+	}
+}
+    
+	
+
+
+Question 1:
+Write a java program to create a class 'Calculator', that has methods
+such as multiply(), add(), subtract(), divide(), accepting two arguments
+both of them as int data type. Overload these methods which will be accepting
+two arguments of datatype double. In the main method showcase the use of these methods.
+
+public class Calculator {
+
+   
+    public static int multiply(int a, int b) {
+        return a * b;
+    }
+    
+ 
+    public static double multiply(double a, double b) {
+        return a * b;
+    }
+    
+ 
+    public static int add(int a, int b) {
+        return a + b;
+    }
+    
+    
+    public static double add(double a, double b) {
+        return a + b;
+    }
+    
+   
+    public static int subtract(int a, int b) {
+        return a - b;
+    }
+    
+ 
+    public static double subtract(double a, double b) {
+        return a - b;
+    }
+    
+    // Method to divide two integers
+    public static int divide(int a, int b) {
+        // Simple integer division; assumes b != 0
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+    
+    // Overloaded method to divide two doubles
+    public static double divide(double a, double b) {
+        // Double division; assumes b != 0
+        if (b == 0) {
+            throw new ArithmeticException("Cannot divide by zero");
+        }
+        return a / b;
+    }
+    
+    public static void main(String[] args) {
+        // Using integer methods
+        int Res1 = multiply(6, 3);
+        int Res2 = add(6, 3);
+        int Res3 = subtract(6, 3);
+        int Res4 = divide(6, 3);
+        
+        System.out.println("Integer Multiplication: " + Res1);
+        System.out.println("Integer Addition: " + Res2);
+        System.out.println("Integer Subtraction: " + Res3);
+        System.out.println("Integer Division: " + Res4);
+        
+        // Using double methods
+        double Res5 = multiply(6.5, 3.2);
+        double Res6 = add(6.5, 3.2);
+        double Res7 = subtract(6.5, 3.2);
+        double Res8 = divide(6.5, 3.2);
+        
+        System.out.println("Double Multiplication: " + Res5);
+        System.out.println("Double Addition: " + Res6);
+        System.out.println("Double Subtraction: " + Res7);
+        System.out.println("Double Division: " + Res8);
+    }
+}
+
+
+
+
+
+
+Question 5:
+Write a java program to print fibonacci series using recursion fuction.
+Make sure you have following in your recursion function
+1. Base Case
+2. return statement and return type
+3. Method should call itself inside the method body.
+
+public class FibonacciSeries{
+	
+	public static int fibonacci(int num){
+		if (num == 0) {
+            return 0;
+        } else if (num == 1) {
+            return 1;
+        } else {
+            return fibonacci(num - 1) + fibonacci(num - 2);
+        }
+	}
+	
+	public static void main(String[] args){
+		
+		int n1 = 10;
+		for(int i=0;i<=n1;i++){
+			System.out.println(fibonacci(i));
+		}
+	}
+}
+
+
+
+
+
+Question 9:
+Write a java program to demonstrate the use of final keyword with variable, method
+and classes. Understand and study the difference b/w a final and a regular variable,
+methhod and classes.
+
+
+final class FinalClass {
+    
+	//we cannot modify this variable in future code
+    final double pie = 3.14;
+	
+	//we can modify this variable in future code
+    int num1 = 20;
+
+    
+    public final void finalMethod() {
+        System.out.println("This is a final method.");
+    }
+
+    public void regularMethod() {
+        System.out.println("This is a regular method.");
+    }
+	
+	public static void main(String[] args){
+		FinalClass fc = new FinalClass();
+		System.out.println(fc.pie);
+		System.out.println(fc.num1);
+		fc.regularMethod();
+		fc.finalMethod();
+		
+	}
+}
+
+Question 6:
+Write java program to print factorial of a number using recursion function.
+
+public class Factorial {
+
+    // Recursive method to calculate factorial
+    public static int factorial(int n) {
+        // Base case: factorial of 0 is 1
+        if (n == 0) {
+            return 1;
+        } else {
+            // Recursive case: n! = n * (n-1)!
+            return n * factorial(n - 1);
+        }
+    }
+
+    public static void main(String[] args) {
+        int number = 10; // You can change this to any non-negative integer
+
+        // Calculate factorial using the recursive method
+        int result = factorial(number);
+
+        // Print the result
+        System.out.println("Factorial of " + number + " is " + result);
+    }
+}
+
+
+
+Question 11:
+Write a java method, which will take array of integers as input and will reverse 
+the elements in the array.
+
+
+public class ArrayUtils {
+
+    // Method to reverse an array
+    public static void reverseArray(int[] array) {
+        int start = 0;           // Start index
+        int end = array.length - 1; // End index
+
+        // Swap elements from start to end
+        while (start < end) {
+            // Swap array[start] with array[end]
+            int temp = array[start];
+            array[start] = array[end];
+            array[end] = temp;
+
+            // Move towards the middle
+            start++;
+            end--;
+        }
+    }
+
+    // Method to print the array
+    public static void printArray(int[] array) {
+        for (int value : array) {
+            System.out.print(value + " ");
+        }
+        System.out.println(); // Move to the next line after printing the array
+    }
+
+    public static void main(String[] args) {
+        int[] numbers = {1, 2, 3, 4, 5}; // Example array
+
+        System.out.println("Original array:");
+        printArray(numbers); // Print the original array
+
+        reverseArray(numbers); // Reverse the array
+
+        System.out.println("Reversed array:");
+        printArray(numbers); // Print the reversed array
+    }
+}
+
+
+
+12.Write a final method in Calculator created above to get the LCM, HCF of varargs.
+go through the varargs topic in the Chapter 7 to understand what varargs is.
+public class Calculator {
+
+    // Method to calculate HCF (GCD) of two numbers using Euclidean algorithm
+    private static int gcd(int a, int b) {
+        while (b != 0) {
+            int temp = b;
+            b = a % b;
+            a = temp;
+        }
+        return a;
+    }
+
+    // Method to calculate LCM of two numbers
+    private static int lcm(int a, int b) {
+        return (a * b) / gcd(a, b);
+    }
+
+    // Method to calculate HCF (GCD) of multiple numbers using varargs
+    public static int hcf(int... numbers) {
+        if (numbers.length == 0) {
+            throw new IllegalArgumentException("At least one number is required.");
+        }
+        int result = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            result = gcd(result, numbers[i]);
+        }
+        return result;
+    }
+
+    // Method to calculate LCM of multiple numbers using varargs
+    public static int lcm(int... numbers) {
+        if (numbers.length == 0) {
+            throw new IllegalArgumentException("At least one number is required.");
+        }
+        int result = numbers[0];
+        for (int i = 1; i < numbers.length; i++) {
+            result = lcm(result, numbers[i]);
+        }
+        return result;
+    }
+
+    public static void main(String[] args) {
+        // Example usage
+        int[] nums = {12, 15, 20};
+
+        System.out.println("HCF of the numbers: " + hcf(nums)); // Output: 1
+        System.out.println("LCM of the numbers: " + lcm(nums)); // Output: 60
+    }
+}
+
+
+
+Question 10:
+Write a java class StringManupulation, which has methods to perform below actions
+	a. Count total numbers of characters.
+	b. Replace all occourances of a specific word,
+	c. Convert the sentence to upper case.
+	d. Reverse a string.
+	e. Find the longest word out of the sentence passed as argument. 
+	HINT : study the java String class, and go through the available methods.
+
+
+
+public class StringManipulation {
+
+    
+    public static int wordcount(String word) {
+        return word.length();
+    }
+
+
+    public static String replaceWord(String sentence, String oldword, String newword) {
+        return sentence.replace(oldword, newword);
+    }
+
+
+    public static String toupper(String word) {
+        return word.toUpperCase();
+    }
+
+    
+    public static String reversestring(String word) {
+        return new StringBuilder(word).reverse().toString();
+    }
+
+    
+    public static String LongWord(String sentence) {
+        String[] words = sentence.split("\\s+");
+        String longestWord = "";
+        for (String word : words) {
+            if (word.length() > longestWord.length()) {
+                longestWord = word;
+            }
+        }
+        return longestWord;
+    }
+
+    public static void main(String[] args) {
+		
+        String sentence = "Hi My Name is ABC";
+
+        
+        System.out.println(wordcount(sentence));
+
+        
+        String replacedSentence = replaceWord(sentence, "ABC", "XYZ");
+        System.out.println(replacedSentence);
+
+        System.out.println(toupper(sentence));
+
+      
+        System.out.println(reversestring(sentence));
+
+        System.out.println(LongWord(sentence));
+    }
+}
+
