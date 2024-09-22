@@ -1,0 +1,408 @@
+Question 1:
+Write a java program to create a class 'Calculator', that has methods
+such as multiply(), add(), subtract(), divide(), accepting two arguments
+both of them as int data type. Overload these methods which will be accepting
+two arguments of datatype double. In the main method showcase the use of these methods.
+Ans->
+import java.util.Scanner;
+public class Calculator {
+    public void multiply(int first,int sec){
+        System.out.println( first * sec);
+    }
+    public void add(int first,int sec){
+        System.out.println( first+sec);
+    }
+    public void subtract(int first,int sec){
+        System.out.println(first-sec);
+    }
+    public void divide(int first,int sec){
+        if(sec==0) {
+            throw new ArithmeticException("Devision not possible");
+        }else {
+            System.out.println(first / sec);
+        }
+    }
+    //method overloading
+    public void multiply(double first,double sec){
+        System.out.println( first * sec);
+    }
+    public void add(double first,double sec){
+        System.out.println( first+sec);
+    }
+    public void subtract(double first,double sec){
+        System.out.println(first-sec);
+    }
+    public void divide(double first,double sec){
+        if(sec==0){
+            throw new ArithmeticException("Devision not possible");
+        }else {
+            System.out.println(first / sec);
+        }
+    }
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        Calculator cal =new Calculator();
+        System.out.println("enter the frist number: ");
+       // int first=sc.nextInt();
+        double f=sc.nextDouble();
+        System.out.println("enter the second number :");
+        //int sec=sc.nextInt();
+        double s=sc.nextDouble();
+        //cal.add(first,sec);
+        cal.add(f,s);
+        cal.multiply(f,s);
+        cal.divide(f,s);
+        cal.subtract(f,s);
+    }
+}
+Question 2:
+Write a Book class, having two constructors, showcasing constructor overloading,
+one constructor will take title, Author as arguments, the other constructor will
+take title, author and numberOfPages as arguments. Create objects of this class
+showcasing both the constructor usage.
+Ans->
+public class Book {
+    String title;
+    String author;
+    int numberOfPages;
+
+    Book(){
+
+    }
+     Book(String title,String author){
+        this.title=title;
+        this.author=author;
+     }
+    Book(String title,String author,int numberOfPages){
+        this.title=title;
+        this.author=author;
+        this.numberOfPages=numberOfPages;
+
+    }
+    public void display(){
+        System.out.print(title+",");
+        System.out.print(author+" ,");
+        System.out.println(numberOfPages);
+    }
+
+    public static void main(String[] args) {
+        Book book=new Book("java","jmsgolsling");
+        book.display();
+        Book book1=new Book("c","jpmorgan",1012);
+        book1.display();
+    }
+}
+
+Question 3:
+Write a Rectangle class, having length and width as instance variable.
+Create a method isEqual(Rectangle rec) to check if the current rectangle is 
+equal to the other rectangle passed as an argument.
+Ans->
+public class Rectangle {
+    private double length;
+    private double width;
+
+    Rectangle(double length,double width){
+        this.length=length;
+        this.width=width;
+    }
+    public boolean isEqual(Rectangle rec){
+         return this.length == rec.length && this.width == rec.width;
+    }
+    public static void main(String[] args) {
+        Rectangle rectangle=new Rectangle(5,7);
+        Rectangle rectangle1=new Rectangle(5,7);
+        Rectangle rectangle2=new Rectangle(4,7);
+
+        System.out.println(rectangle.isEqual(rectangle1));
+        System.out.println(rectangle.isEqual(rectangle2));
+
+    }
+}
+
+Question 5:
+Write a java program to print fibonacci series using recursion fuction.
+Make sure you have following in your recursion function
+Ans->
+public class Febonacci {
+    public static int febonacciSeries(int n){
+        if(n<=1){
+            return n;
+        }
+        return febonacciSeries(n-1)+febonacciSeries(n-2);
+    }
+
+    public static void main(String[] args) {
+        int count=10;
+        for(int i=0;i<count;i++){
+            System.out.print(febonacciSeries(i)+",");
+        }
+    }
+}
+
+Question 6:
+Write java program to print factorial of a number using recursion function.
+Ans->
+public class Factorial {
+
+    public static int fact(int n){
+        if(n>=1){
+            return n*fact(n-1);
+        }
+        return 1;
+    }
+    public static void main(String[] args) {
+        int num=6,facto=1;
+        facto=fact(num);
+        System.out.println("factorial of number "+num+"= "+facto);
+    }
+}
+
+Question 7:
+Create a Person class with Private attributes name, age, email address.
+Write a method which will set the values of these instance variable as these
+public class Person {
+
+    private String name;
+    private int age;
+    private String email;
+
+    public Person(int age, String name, String address) {
+        this.age = age;
+        this.name = name;
+        this.email = address;
+    }
+    final void setPersionAdd(int age, String name, String address){
+        this.age=age;
+        this.name=name;
+        this.email=email;
+
+    }
+
+    public Person() {
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
+    public String getEmail() {
+        return email;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
+    public void displayInfo(){
+
+        System.out.println( "Persion{" +
+                "name='" + name + '\'' +
+                ", age=" + age +
+                ", address='" + email + '\'' +
+                '}');
+    }
+
+    public static void main(String[] args) {
+        Person person=new Person();
+        person.setName("Swaraj");
+        person.setAge(26);
+        person.setEmail("Pattamundai");
+
+        System.out.println("\nUpdated Information:");
+        System.out.println("Name: " + person.getName());
+        System.out.println("Age: " + person.getAge());
+        System.out.println("Address: " + person.getEmail());
+
+        person.displayInfo();
+        person.setPersionAdd(26,"prakash","das@gmail.com");
+    }
+}
+Question 8:
+write a java class StaticBlock, Create a static block in the class which has some instance 
+Ans->
+public class StaticBlock {
+
+    int instanceV;
+
+    static int staticVariable;
+
+    static {
+        staticVariable= 30;
+        System.out.println("static variable is "+staticVariable);
+    }
+    public  StaticBlock(int instanceV){
+        this.instanceV=instanceV;
+        System.out.println("this is instatance variable "+instanceV);
+    }
+    public void display(){
+        System.out.println("Static variable "+staticVariable);
+        System.out.println("instance variable "+instanceV);
+    }
+
+    public static void main(String[] args) {
+        StaticBlock sb=new StaticBlock(5);
+        sb.instanceV=7;
+        sb.display();
+    }
+
+}
+
+Question 9:
+Write a java program to demonstrate the use of final keyword with variable, method
+Ans->
+final class FinalClass {
+    public void displayMessage() {
+        System.out.println("This is a method from a final class.");
+    }
+}
+class RegularClass {
+    //  final variable: Cannot be changed once initialized
+    final int finalVariable = 100;
+    int regularVariable = 50;
+
+    // final method: Cannot be overridden by subclasses
+    public final void finalMethod() {
+        System.out.println("This is a final method. It cannot be overridden.");
+    }
+public class FinalKeywordDemo {
+    public static void main(String[] args) {
+        FinalClass finalClassObj = new FinalClass();
+        finalClassObj.displayMessage(); 
+    }
+}
+
+Question 10:
+Write a java class StringManupulation, which has methods to perform below actions
+	a. Count total numbers of characters.
+	b. Replace all occourances of a specific word,
+	c. Convert the sentence to upper case.
+	d. Reverse a string.
+	e. Find the longest word out of the sentence passed as argument. 
+	HINT : study the java String class, and go through the available methods.
+Ans->a.
+public class StringManupulation {
+
+    public int countChar(String inputChar){
+        if(inputChar == null){
+            return 0;
+        }
+        return inputChar.length();
+    }
+
+    public static void main(String[] args) {
+        String str= "hello world";
+        StringManupulation stm=new StringManupulation();
+        System.out.println(stm.countChar(str));
+    }
+}
+Ans->b.
+public class ReplaceWord {
+
+    public int strLenth(String inputStr) {
+        if (inputStr == null) {
+            return 0;
+        }
+        return inputStr.length();
+    }
+    public String replaceString(String input,String target,String replaceWord )    {
+        if(input==null || target==null || replaceWord==null){
+            return input;
+        }
+        return input.replaceAll("\\b"+target+"\\b",replaceWord);
+    }
+
+    public static void main(String[] args) {
+        String s="my name is swaraj prakash das";
+        ReplaceWord rw=new ReplaceWord();
+        String newWord=rw.replaceString(s,"das","Das");
+        System.out.println(newWord);
+    }
+}
+Ans->c.
+import java.util.Scanner;
+public class ConverToUpperCase {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter your String : ");
+        String str=sc.nextLine();
+        String newStr=str.toUpperCase();
+        System.out.println(newStr);
+    }
+}
+Ans->d.
+import java.util.Scanner;
+
+public class ReverString {
+    public static void main(String[] args) {
+        Scanner sc= new Scanner(System.in);
+        System.out.println("Enter your String : ");
+        String str=sc.nextLine();
+        String s="";
+        for(int i=str.length()-1;i>=0;i--){
+            s=s+str.charAt(i);
+        }
+        System.out.println(s);
+    }
+}
+Ans->e.
+import java.util.Scanner;
+
+public class LongestWord {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the Sentence :");
+        String str=sc.nextLine();
+        String[] s=str.split("\\s");
+        String longestWord="";
+        for(String word : s){
+            if(word.length() > longestWord.length()){
+                longestWord=word;
+            }
+        }
+        System.out.println(longestWord);
+    }
+}
+
+Question 11:
+Write a java method, which will take array of integers as input and will reverse 
+the elements in the array.
+Ans->
+public class ArrayRevers {
+    public static void revers(int[] array){
+        int first=0;
+        int last=array.length-1;
+
+        while (first<last){
+            int temp=array[first];
+            array[first]=array[last];
+            array[last]=temp;
+            first++;
+            last--;
+        }
+    }
+    public static void main(String[] args) {
+        int []arr={1,2,3,4,5};
+        revers(arr);
+        for(int n:arr){
+            System.out.print(n+",");
+        }
+    }
+}
+
+
+
+
+
