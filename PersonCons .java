@@ -1,4 +1,4 @@
-public class PersonCons {
+public class Person {
 
     // Instance variables
     private String name;
@@ -15,6 +15,13 @@ public class PersonCons {
     // Parameterized constructor
     public Person(String name, int age, String address) {
         this.name = name;
+        this.age = age;
+        this.address = address;
+    }
+
+    // Method to set person details
+    public void setInfo(String name, int age, String address) {
+        this.name = name;       // Using 'this' to refer to the instance variable
         this.age = age;
         this.address = address;
     }
@@ -38,5 +45,11 @@ public class PersonCons {
         Person person2 = new Person("John Doe", 30, "123 Main Street");
         System.out.println("Person 2 Details:");
         person2.displayInfo();
+        System.out.println();
+
+        // Update person1 details using setInfo method
+        person1.setInfo("Alice Smith", 25, "456 Elm Street");
+        System.out.println("Updated Person 1 Details:");
+        person1.displayInfo();
     }
 }
