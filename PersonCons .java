@@ -25,7 +25,9 @@ public class Person {
         this.age = age;
         this.address = address;
     }
-
+public boolean isAdult(){
+return age >= 18;
+}
     // Method to display person details
     public void displayInfo() {
         System.out.println("Name: " + name);
@@ -51,5 +53,8 @@ public class Person {
         person1.setInfo("Alice Smith", 25, "456 Elm Street");
         System.out.println("Updated Person 1 Details:");
         person1.displayInfo();
+
+        System.out.println("is person1 adult :"+ person1.isAdult());
+        System.out.println("is person2 adult :"+ person2.isAdult());
     }
 }
