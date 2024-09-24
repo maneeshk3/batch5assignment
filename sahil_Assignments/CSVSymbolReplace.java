@@ -3,7 +3,7 @@ import java.io.*;
 public class CSVSymbolReplace {
     public static void main(String[] args) {
         if (args.length != 2) {
-            System.out.println("Usage: java CSVSymbolReplacer <input_file_path> <output_file_path>");
+            System.out.println("Usage: java CSVSymbolReplace <input_file_path> <output_file_path>");
             System.exit(1);
         }
 
