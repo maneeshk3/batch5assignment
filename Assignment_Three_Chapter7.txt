@@ -64,7 +64,7 @@ Question 11:
 Write a java method, which will take array of integers as input and will reverse 
 the elements in the array.
 
-Question 12:
+uestion 1Q2:
 Write a final method in Calculator created above to get the LCM, HCF of varargs.
 go through the varargs topic in the Chapter 7 to understand what varargs is.
 
