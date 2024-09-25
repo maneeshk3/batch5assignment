@@ -1,0 +1,5 @@
+Question 1.
+Read a CSV file, and change the delimiter to choice of yours and write the updated data in another file.
+
+Question 2.
+Read the log file, search for exception keyword, read that line and write it in new file with the line number.
