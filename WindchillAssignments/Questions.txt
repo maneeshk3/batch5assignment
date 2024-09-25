@@ -1,0 +1,25 @@
+Assignment-01
+
+1. Create an Organization, Name it: Batch5
+2. Create a user --> <YourLastName>_orgadmin
+3. Make user: <YourLastName>_orgadmin as Organization Admin for the org you created in step 1
+4. Login with <YourLastName>_orgadmin, make sure that user can access Organization link
+5. Create two users in Org_<YourLastName>, name it: product_user001, library_user001,normal_user001_prod, normal_user001_lib
+
+6. Make product_user001 as a product creator only
+
+7. Make library_user001 as a library creator only.
+
+8. Login with product_user001 and create a product --> product001 and add normal_user001_prod as a member.
+
+9. Login with library_user001 and create a library --> library001 and add normal_user001_lib as a member.
+
+10. Login with normal_user001_prod, normal_user001_lib check what options they are getting.
+
+11. Login with product/library creators check what all option they are able to see.
+
+12. Same with Orgadmin.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Assignment -02
