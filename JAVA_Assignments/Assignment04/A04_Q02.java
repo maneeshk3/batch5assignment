@@ -32,7 +32,6 @@ class rectangle extends shape {
 	this.height = h;
 	return h * d;
 	
-	
 }
 	
 }
