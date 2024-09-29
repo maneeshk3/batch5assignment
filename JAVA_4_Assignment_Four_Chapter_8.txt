@@ -1,0 +1,75 @@
+Question 1:
+    Write a Java program where you create a superclass Animal with a method makeSound(). 
+    Create two subclasses, Dog and Cat, that inherit from Animal and override the makeSound() method to print Woof and Meow respectively. 
+    
+    In the main() method:
+        Declare a Animal reference and assign it objects of both Dog and Cat.
+        Call the makeSound() method using the Animal reference for both instances and observe how dynamic method dispatch works.
+
+Question 2:
+    Design a abstract Shape with a abstract method calculateArea().
+    Create subclasses Rectangle and Circle using the Shpae abstract class, each with its own calculateArea() implementation i.e method override.
+    Write a program to compute the areas of both shapes.
+    Rectangle should have width and height instance variable and implement calculateArea() to return the area of a rectangle.
+    Circle should have a radius instance variable and implement calculateArea() to return the area of a circle.
+    
+    Also:
+        Add a final method getType() in Shape that prints the shape type and ensure it cannot be overridden in subclasses.
+        In the main() method, demonstrate the use of abstract classes, calling getType() and calculateArea() for both Rectangle and Circle.
+        HINT : this.getClass().getSimpleName() or this.getClass() method return the name of the current object class.
+
+Question 3:
+    Create a superclass Vehicle with:
+        A String instance variable as brand.
+        Create a protected instance variable fuelType of type String.
+        A constructor that initializes the brand and the fuelType.
+        Implement a method fuelTypeInfo() that prints the fuelType of the vehicle.
+        A method startEngine() that prints: Starting the vehicle's engine....
+    
+    Then create a subclass Car that inherits from Vehicle with:
+        An additional int instance variable yearOfLaunch.
+        A constructor that initializes brand, fuelType and yearOfLaunch using the super keyword.
+        Override the startEngine() method to print: Starting the car's engine...
+        Add a method playMusic() that prints Playing music in the car...
+        
+    In the main() method:
+        Declare a reference variable of type Vehicle and assign the reference of a Car object.
+        Call the startEngine() method using the Vehicle reference and observe that the method which  is executed.
+        Call the fuelTypeInfo() method using the Vehicle reference to display the fuelType.
+        Try to call the playMusic() method using the Vehicle reference. This should result in a compilation error (as Vehicle doesn’t define playMusic()).
+        Use casting to convert the Vehicle reference back to a Car object and then successfully call the playMusic() method.
+    
+    Subclass Motorcycle (inherits from Vehicle):
+        Create a constructor that initializes the fuelType of the Motorcycle.
+        Override the startEngine() method to print Starting the motorcycle's engine...
+        
+    Demonstrate Polymorphism with Both Subclasses:
+        Create a Vehicle reference for both a Car and a Motorcycle.
+        Call the startEngine() method using both references to demonstrate polymorphism.
+        Show that the correct startEngine() method is invoked for each subclass (Car and Motorcycle), even though the reference is of type Vehicle.
+    
+    Polymorphism and Method Resolution:
+        Show that method overriding (for startEngine()) works through the superclass reference, but subclass-specific methods (like playMusic()) require casting back to the subclass type.
+
+Question 4:
+    Create a superclass Bird with: A method fly() that prints: Bird is flying....
+    
+    Create a subclass Eagle that: Overrides the fly() method to print: Eagle is flying high..
+    In the overridden fly() method, use super.fly() to also call the fly() method of the superclass.
+    
+    In the main() method: Create an Eagle object and call the fly() method. Ensure both superclass and subclass methods are called.
+
+Question 5:
+    Create a Superclass Person: having instance variable name, age, gender a Constructor to  Initializes the name age gender.
+    A method displayInfo() that prints: "Person Name: " + name, like that the other info as well.
+    
+    Subclass Employee (extends Person): Adds an int instance variable employeeId.
+    Introduces a new name instance variable (hides the name instance variable from the Person class to demonstrate variable hiding).
+    Initializes both name (from Person and from Employee), age, gender and employeeId using the super keyword to call the Person constructor.
+    Override the displayInfo() method to print: "Employee Name: ", " Age : " and "Gender : ", Employee ID: ",  Name from the person class.
+    Add a method showEmployeeName() to demonstrate how the name variable is hidden at the subclass level, print the name variable created in employee class.
+    
+    Subclass Manager (extends Employee): Adds a String instance variable department.
+    Initializes name, age, gender, employeeId, and department using the super keyword to call the Employee constructor.
+    Override the displayInfo() method to print: "Manager Name: " + name + ", " Age : " and "Gender : ", Employee ID: " + employeeId + ", Department: " + department.
+    Use the super keyword to call the displayInfo() method from the Employee class to demonstrate method chaining.
