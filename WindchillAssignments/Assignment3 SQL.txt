@@ -1,0 +1,44 @@
+--QUERY TO GET THE MASTER DETAILS OF THE PART
+select * from wtpartmaster;
+
+--QUERY TO GET THE VERSION,HISTORY DETAILS ABOUT THE PART.
+select * from wtpart;
+
+--QUERY TO GET THE MASTER DETAILS OF PART WHOES NAME STARTS WITH PEN
+select * from wtpartmaster where name like 'Pen%';
+
+--QUERY TO GET THE HISTORY,VERSION DETAILS ABOUT ONLY 1 PARTICULAR PART WITH THE HELP OF MASTER ID
+select * from wtpart JOIN  WHERE ida3masterreference = '132088';
+
+--QUERY TO GET THE COMPLETE DETAILS FROM BOTH MASTER AND PART TABLE FOR PARTICULAR PART BASED ON ITS PRIMARY KEY.
+select wtpart.*, wtpartmaster.* from wtpartmaster 
+join wtpart on wtpartmaster.ida2a2=wtpart.ida3masterreference 
+where wtpartmaster.ida2a2='132088';
+
+
+--QUERY TO FIND ALL THE part objects with columns having partName, partNumber, Revision,Iteration,LifeCycle State
+select wtpartmaster.name, wtpartmaster.wtpartnumber,wtpart.versionida2versioninfo,wtpart.iterationida2iterationinfo ,wtpart.statestate from wtpartmaster 
+join  wtpart on wtpartmaster.ida2a2=wtpart.ida3masterreference 
+where wtpartmaster.ida2a2='132146' order by wtpart.versionida2versioninfo,wtpart.iterationida2iterationinfo;
+
+--------------------------------------------------------------------------------------------
+
+--QUERY TO GET THE VERSION,HISTORY DETAILS ABOUT THE DOCUMENT
+SELECT * FROM WTDOCUMENT;
+
+--QUERY TO GET THE MASTER DETAILS OF THE DOCUMENT
+select * from wtdocumentmaster;
+
+--QUERY TO GET THE HISTORY,VERSION DETAILS ABOUT ONLY 1 PARTICULAR DOCUMENT WITH THE HELP OF MASTER ID
+select * from WTDOCUMENT WHERE ida3masterreference = '132272';
+
+--QUERY TO GET THE COMPLETE DETAILS FROM BOTH MASTER AND PART TABLE FOR PARTICULAR DOCUMENT BASED ON ITS PRIMARY KEY.
+select WTDOCUMENT.*, wtdocumentmaster.* from wtdocumentmaster join WTDOCUMENT on wtdocumentmaster.ida2a2=WTDOCUMENT.ida3masterreference where wtdocumentmaster.ida2a2='132272';
+
+
+--QUERY TO GET DOCUMENT DETAILS
+select wtdocumentmaster.name, wtdocumentmaster.wtDOCUMENTnumber,WTDOCUMENT.versionida2versioninfo,WTDOCUMENT.iterationida2iterationinfo ,WTDOCUMENT.statestate from wtdocumentmaster 
+join  WTDOCUMENT on wtdocumentmaster.ida2a2=WTDOCUMENT.ida3masterreference where wtdocumentmaster.ida2a2='132287' order by WTDOCUMENT.versionida2versioninfo,WTDOCUMENT.iterationida2iterationinfo;
+
+
+--------------------------------------------------------------------------------------------
