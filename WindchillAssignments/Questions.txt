@@ -22,4 +22,62 @@ Assignment-01
 
 ----------------------------------------------------------------------------------------------------------------------------------
 
-Assignment -02
+Assignment-2
+
+1. Create document objects,add primary and secondary content
+1.1. Checking the document object, change the primary content and checkout the document object.
+1.2 Create parent child relation in documents.
+
+2. Create Part object
+2.1. Create BOM structure, Parent Child relaction in parts.
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-3
+
+Question 1:
+	Create WTDocument, WTPart and run the checkIn, checkOut, and Revise action on the objects.
+	Check the history of all the revisions in the history tab.
+
+Question 2:
+	write a select query in the pdmtest database which returns all the part objects....
+	with columns having partName, partNumber, Revision + Iteration, LifeCycle, LifeCycle State, Container name;
+	
+	Write a select query to find all the document objects, in the result include 
+	only DocumentName, DocumentNumber, Revision+Iteration, LifeCycle, LifycycleState, Conatiner Name
+	
+Question 3: 
+	Write a select query to find all the details of an object(WTPart, WTDocument) i.e the columns from the MasterTable and 
+	from the VersionTable where the partName,documentNumber='__'
+	
+Question 4:
+	Create a document in one of the library..
+	Write a query to find all the documents which are in library.
+	Write a query to print the Library Container name of a given document number. ( the document Number used here should be 
+	of the document residing in Library Container)
+	
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-4
+
+Question 1
+	create  BASIC Life Cycle template /  and Advance Life Cycle template with the Workflow
+
+Question 2
+	Create a workflow containing two activities at org level
+	1st activity name: Review Part
+	1st activity participant: Designer role
+	Completetion required by any of the user
+	2nd activity name: Approve Part
+	Participant: Approver
+	All users are required to complete this activity
+
+	Now, create a team template at Organization level, name it as: organizationname_Team
+	Mention this in your part Oir
+	Have designer and approver in this team template.
+	Test the workflow in different products containing different users in the context team roles and 
+	make sure workflow works as expected
+
+
+-------------------------------------------------------------------------------------------------------------
