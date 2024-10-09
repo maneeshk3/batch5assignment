@@ -1,0 +1,2 @@
+select wtpm.name, wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state,wtp.statestate, wtp.ida3containerreference, linkp.namecontainerinfo  from wtpart wtp, wtpartmaster wtpm, pdmlinkproduct linkp ;
+select wtpart from wtpartmaster;
