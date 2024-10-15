@@ -1,0 +1,17 @@
+Windchill Assignment Five:
+
+1. Create Four global attribute (Data Type)
+	a. partClassification (String)
+	b. isDrawing (boolean)
+	c. releaseDate (DateAndTime)
+	d  height (real number)
+	
+2. Use these attributes in the wt.part.WTPart Object. 
+	
+3. Create some Part objects, and populated these attributes.
+
+4. Create SQL query for joins as well:
+	a. From StringDefinition join StringValue join WTPartMaster join WTPart
+	b. From booleanDefinition join booleanValue join WTPartMaster join WTPart
+	c. From integerDefinition join integerValue join WTPartMaster join WTPart
+	d. From timestampDefinition join timestamValue join WTPartMaster join WTPart

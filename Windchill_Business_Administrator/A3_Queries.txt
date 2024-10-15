@@ -1,0 +1,65 @@
+Question 1:
+	Create WTDocument, WTPart and run the checkIn, checkOut, and Revise action on the objects.
+	Check the history of all the revisions in the history tab.
+
+Question 2:
+	write a select query in the pdmtest database which returns all the part objects....
+	with columns having partName, partNumber, Revision + Iteration, LifeCycle, LifeCycle State, Container name;
+	
+	
+			select wtpm.name, wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate, prod.namecontainerinfo 
+			from wtpart wtp, wtpartmaster wtpm, pdmlinkproduct prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and prod.ida2a2 = wtp.ida3containerreference;
+
+	
+	Write a select query to find all the document objects, in the result include 
+	only DocumentName, DocumentNumber, Revision+Iteration, LifeCycle, LifycycleState, Conatiner Name
+	
+	
+			select wtpm.name, wtpm.wtdocumentnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate, prod.namecontainerinfo 
+			from wtdocument wtp, wtdocumentmaster wtpm, pdmlinkproduct prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and prod.ida2a2 = wtp.ida3containerreference;
+	
+	
+Question 3: 
+	Write a select query to find all the details of an object(WTPart, WTDocument) i.e the columns from the MasterTable and 
+	from the VersionTable where the partName,documentNumber=''
+	
+			select wtpm.name, wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate, prod.namecontainerinfo, wtp.*
+			from wtpart wtp, wtpartmaster wtpm, pdmlinkproduct prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference and
+			prod.ida2a2 = wtp.ida3containerreference
+			and wtpm.wtpartnumber = '0000000021';
+			
+			select wtpm.name, wtpm.wtdocumentnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate, prod.namecontainerinfo, wtp.*
+			from wtdocument wtp, wtdocumentmaster wtpm, pdmlinkproduct prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and prod.ida2a2 = wtp.ida3containerreference
+			and wtpm.wtdocumentnumber = '';
+			
+	
+Question 4:
+	
+	Create a document in one of the library..
+	Write a query to find all the documents which are in library.
+	Write a query to print the Library Container name of a given document number. ( the document Number used here should be 
+	of the document residing in Library Container)
+	
+			select wtpm.name, wtpm.wtdocumentnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate, prod.namecontainerinfo, wtp.*
+			from wtdocument wtp, wtdocumentmaster wtpm, wtlibrary prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and prod.ida2a2 = wtp.ida3containerreference
+			and wtpm.wtdocumentnumber = '0000000061';
+			
+			select wtpm.name, prod.namecontainerinfo,wtpm.wtdocumentnumber,  wtp.versionida2versioninfo, wtp.iterationida2iterationinfo, wtp.classnamekeya2state, wtp.statestate,  wtp.*
+			from wtdocument wtp, wtdocumentmaster wtpm, wtlibrary prod 
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and prod.ida2a2 = wtp.ida3containerreference
+			and wtpm.wtdocumentnumber = '0000000061';
+	
+
+
+
+

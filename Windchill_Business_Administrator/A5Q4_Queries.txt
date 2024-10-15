@@ -1,0 +1,44 @@
+Create SQL query for joins as well:
+	a. From StringDefinition join StringValue join WTPartMaster join WTPart
+	
+			select wtpm.name "part_name",prod.namecontainerinfo , wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo,sv.value, wtp.statestate
+			from wtpart wtp, wtpartmaster wtpm, StringDefinition sd, StringValue sv, PDMLinkProduct prod
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and  wtpm.ida3containerreference = prod.ida2a2
+			and sv.ida3a6 = sd.ida2a2
+			and wtp.ida2a2 = sv.ida3a4 
+			and sd.name = 'PLANT_NAME';
+	
+	b. From booleanDefinition join booleanValue join WTPartMaster join WTPart
+	
+			select wtpm.name "part_name",prod.namecontainerinfo , wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo,sv.value, wtp.statestate
+			from wtpart wtp, wtpartmaster wtpm, booleandefinition sd, booleanvalue sv, PDMLinkProduct prod
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and  wtpm.ida3containerreference = prod.ida2a2
+			and sv.ida3a6 = sd.ida2a2
+			and wtp.ida2a2 = sv.ida3a4 
+			and sd.name = 'IS_DRAWING';
+			
+	c. From integerDefinition join integerValue join WTPartMaster join WTPart
+	
+			Note: we created the real number datatype Attribute so it will store in floatdefinition and floatvalue table respectively.
+ 			
+			select wtpm.name "part_name",prod.namecontainerinfo , wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo,sv.value, wtp.statestate
+			from wtpart wtp, wtpartmaster wtpm, floatdefinition sd, floatvalue sv, PDMLinkProduct prod
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and  wtpm.ida3containerreference = prod.ida2a2
+			and sv.ida3a6 = sd.ida2a2
+			and wtp.ida2a2 = sv.ida3a4 
+			and sd.name = 'HEIGHT';
+	
+	
+	d. From timestampDefinition join timestamValue join WTPartMaster join WTPart
+	
+	
+			select wtpm.name "part_name",prod.namecontainerinfo , wtpm.wtpartnumber, wtp.versionida2versioninfo, wtp.iterationida2iterationinfo,sv.value, wtp.statestate
+			from wtpart wtp, wtpartmaster wtpm, timestampdefinition sd, timestampvalue sv, PDMLinkProduct prod
+			where wtpm.ida2a2 = wtp.ida3masterreference 
+			and  wtpm.ida3containerreference = prod.ida2a2
+			and sv.ida3a6 = sd.ida2a2
+			and wtp.ida2a2 = sv.ida3a4 
+			and sd.name = 'RELEASE_DATE';
