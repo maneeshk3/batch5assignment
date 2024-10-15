@@ -1,0 +1,12 @@
+Assignment 6:
+
+Wrtie a SQL query to print below,
+
+	Child_Name, Child_Number, Parent_Name, Parent_Number, Parent_LifeCycleState, Child_LifeCycleState,
+	Child_ContainerName, Parent_ContainerName
+	
+	For
+	
+1. WTPartUsageLink
+2. WTPartDescribeLink
+3. WTDocumentUsageLink

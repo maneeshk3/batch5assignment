@@ -1,0 +1,24 @@
+Hell All PFA todays Assignment...
+The Morning batch has to do it by tomorrow Morning.
+Evening Batch has to complete it by Tomorrow Evening.
+Question 1:
+	Create WTDocument, WTPart and run the checkIn, checkOut, and Revise action on the objects.
+	Check the history of all the revisions in the history tab.
+
+Question 2:
+	write a select query in the pdmtest database which returns all the part objects....
+	with columns having partName, partNumber, Revision + Iteration, LifeCycle, LifeCycle State, Container name;
+	
+	Write a select query to find all the document objects, in the result include 
+	only DocumentName, DocumentNumber, Revision+Iteration, LifeCycle, LifycycleState, Conatiner Name
+	
+Question 3: 
+	Write a select query to find all the details of an object either WTPart or WTDocument or any other object
+	i.e the columns from the MasterTable and 
+	from the VersionTable where the partName or the documentNumber or the objectNumber='____'.
+	
+Question 4:
+	Create a document in one of the library..
+	Write a query to find all the documents which are in library.
+	Write a query to print the Library Container name of a given document number. ( the document Number used here should be 
+	of the document residing in Library Container)
