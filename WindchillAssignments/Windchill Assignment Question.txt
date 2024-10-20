@@ -1,0 +1,115 @@
+Assignment-1
+
+1. Create an Organization, Name it: Batch5
+2. Create a user --> <YourLastName>_orgadmin
+3. Make user: <YourLastName>_orgadmin as Organization Admin for the org you created in step 1
+4. Login with <YourLastName>_orgadmin, make sure that user can access Organization link
+5. Create two users in Org_<YourLastName>, name it: product_user001, library_user001,normal_user001_prod, normal_user001_lib
+6. Make product_user001 as a product creator only
+7. Make library_user001 as a library creator only.
+8. Login with product_user001 and create a product --> product001 and add normal_user001_prod as a member.
+9. Login with library_user001 and create a library --> library001 and add normal_user001_lib as a member.
+10. Login with normal_user001_prod, normal_user001_lib check what options they are getting.
+11. Login with product/library creators check what all option they are able to see.
+12. Same with Orgadmin.
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-2
+
+1. Create document objects,add primary and secondary content
+1.1. Checking the document object, change the primary content and checkout the document object.
+1.2 Create parent child relation in documents.
+
+2. Create Part object
+2.1. Create BOM structure, Parent Child relaction in parts.
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-3
+
+Question 1:
+	Create WTDocument, WTPart and run the checkIn, checkOut, and Revise action on the objects.
+	Check the history of all the revisions in the history tab.
+
+Question 2:
+	write a select query in the pdmtest database which returns all the part objects....
+	with columns having partName, partNumber, Revision + Iteration, LifeCycle, LifeCycle State, Container name;
+	
+	Write a select query to find all the document objects, in the result include 
+	only DocumentName, DocumentNumber, Revision+Iteration, LifeCycle, LifycycleState, Conatiner Name
+	
+Question 3: 
+	Write a select query to find all the details of an object(WTPart, WTDocument) i.e the columns from the MasterTable and 
+	from the VersionTable where the partName,documentNumber='__'
+	
+Question 4:
+	Create a document in one of the library..
+	Write a query to find all the documents which are in library.
+	Write a query to print the Library Container name of a given document number. ( the document Number used here should be 
+	of the document residing in Library Container)
+	
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-4
+
+	create  BASIC Life Cycle template /  and Advance Life Cycle template with the Workflow
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment-5
+
+	Create a workflow containing two activities at org level
+	1st activity name: Review Part
+	1st activity participant: Designer role
+	Completetion required by any of the user
+	2nd activity name: Approve Part
+	Participant: Approver
+	All users are required to complete this activity
+
+	Now, create a team template at Organization level, name it as: organizationname_Team
+	Mention this in your part Oir
+	Have designer and approver in this team template.
+	Test the workflow in different products containing different users in the context team roles and 
+	make sure workflow works as expected
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment 6
+
+1. Create a Part subtype: "PLMBPart" and work on the below points.
+2. Create a Document subtype: "PLMBDoc" and work on the below points  
+3.Create below global(reusable)attributes on PLMBPart Subtype
+
+a)Country -----string type  
+b)States -----string type  
+c)External-----Boolean type  
+d)Issue Date------Timestamp/date type
+e)Country of origin---- String type
+
+4. Create one local attribute for PLMBPart Subtype.
+a)Supplier-----String type
+Note: First, attempt to reproduce the error and observe it. We will discuss it in a session to work on the resolution.
+
+5.Create below global(reusable)attributes on PLMBDoc Subtype
+
+a)Creation Date----Timestamp/date type
+b)Author---string type
+c)Mandataty---Boolean type
+d)Language----String type
+
+
+6. The user should be able to see Country, States, External, and Issue date in the create page.  
+7. The user should not be able to see Issue date on the edit page but can see Country, States, and External.
+8. In the View page all 4 attributes should be visible.
+9. Create a global enumeration where the Country should have values like India, China, and USA, in the dropdown.
+10. States should have values like Karnataka, Kerala, Madhya Pradesh, Manipur, Maharashtra, Ch1,ch2,us1,us2, in dropdown.
+11. Create a legal value list for the Country of origin where values should be like Korea, Paris, Japan, and China.
+12. The Country of Origin attribute must be a mandatory field, and the part creation should not be allowed until a value is entered for this attribute.
+
+
+
+-------------------------------------------------------------------------------------------------------------
