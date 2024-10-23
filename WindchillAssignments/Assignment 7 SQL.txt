@@ -1,0 +1,55 @@
+--Query to find the string data type attributes created by me.
+select * from stringdefinition where displayname = 'Part Classification';
+
+--Query to find the string data type attributes.
+select * from stringdefinition;
+
+--Query to find the string data type attributes values created during part creation.
+select * from stringvalue;
+
+--Query to find the Boolean data type attributes created by me.
+select * from booleandefinition where displayname = 'Is Drawing';
+
+--Query to find the string data type attributes created by me.
+select * from stringdefinition order by createstampa2 desc;
+
+--Query to find the list of values of the attribut
+select * from stringdefinition sd join stringvalue sv on sd.ida2a2=sv.ida3a6 where displayname like 'Part%';
+
+--Query to find the name and values of the string attributes used.
+select sd.displayname,sd.name,sv.value2 from stringdefinition sd join stringvalue sv on sd.ida2a2=sv.ida3a6;
+
+select * from wtpart;
+select * from wtpartmaster;
+
+
+--Query to find the name and values of the string attributes used of particular display name.
+select sd.displayname,sd.name,sv.value2,wtpm.name,wtpm.wtpartnumber from stringdefinition sd 
+join stringvalue sv on sd.ida2a2=sv.ida3a6
+join wtpart wtp on sv.ida3a4=wtp.ida2a2
+join wtpartmaster wtpm on wtp.ida3masterreference=wtpm.ida2a2
+where displayname = 'Part Classification';
+
+
+--Query to find the name and values of the Boolean attributes used of particular display name.
+select bd.displayname,bd.name,bv.value2,wtpm.name,wtpm.wtpartnumber from booleanDefinition bd 
+join booleanvalue bv on bd.ida2a2=bv.ida3a6
+join wtpart wtp on bv.ida3a4=wtp.ida2a2
+join wtpartmaster wtpm on wtp.ida3masterreference=wtpm.ida2a2
+where displayname = 'Is Drawing';
+
+
+--Query to find the name and values of the Integer attributes used of particular display name.
+select id.displayname,id.name,iv.value2,wtpm.name,wtpm.wtpartnumber from integerDefinition id 
+join integervalue iv on id.ida2a2=iv.ida3a6
+join wtpart wtp on iv.ida3a4=wtp.ida2a2
+join wtpartmaster wtpm on wtp.ida3masterreference=wtpm.ida2a2
+where displayname = 'Height';
+
+
+--Query to find the name and values of the Integer attributes used of particular display name.
+select td.displayname,td.name,tv.value2,wtpm.name,wtpm.wtpartnumber from timestampDefinition td 
+join timestampvalue tv on td.ida2a2=tv.ida3a6
+join wtpart wtp on tv.ida3a4=wtp.ida2a2
+join wtpartmaster wtpm on wtp.ida3masterreference=wtpm.ida2a2
+where displayname = 'Height';
