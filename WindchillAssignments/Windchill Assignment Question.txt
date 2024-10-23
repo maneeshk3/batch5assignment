@@ -78,7 +78,7 @@ Assignment-5
 
 -------------------------------------------------------------------------------------------------------------
 
-Assignment 6
+Assignment-6
 
 1. Create a Part subtype: "PLMBPart" and work on the below points.
 2. Create a Document subtype: "PLMBDoc" and work on the below points  
@@ -113,3 +113,33 @@ d)Language----String type
 
 
 -------------------------------------------------------------------------------------------------------------
+
+Assignment-7:
+
+1. Create Four global attribute (Data Type)
+	a. partClassification (String)
+	b. isDrawing (boolean)
+	c. releaseDate (DateAndTime)
+	d  height (real number)
+	
+2. Use these attributes in the wt.part.WTPart Object. 
+	
+3. Create some Part objects, and populated these attributes.
+
+4. Create SQL query for joins as well:
+	a. From StringDefinition join StringValue join WTPartMaster join WTPart
+	b. From booleanDefinition join booleanValue join WTPartMaster join WTPart
+	c. From integerDefinition join integerValue join WTPartMaster join WTPart
+	d. From timestampDefinition join timestamValue join WTPartMaster join WTPart
+
+
+-------------------------------------------------------------------------------------------------------------
+
+Assignment 8: 
+
+Wrtie a SQL query to print below,
+Child_Name, Child_Number, Parent_Name, Parent_Number, Parent_LifeCycleState, Child_LifeCycleState,
+Child_ContainerName, Parent_ContainerName For
+1. WTPartUsageLink
+2. WTPartDescribeLink
+3. WTDocumentUsageLink
