@@ -1,0 +1,76 @@
+-------Assignment 2:
+create table TeamCentreData (ItemNumber varchar(20), ItemVersion varchar(20), ContentName varchar(100),ContentID varchar(20),ContentFilePath varchar(100),FileName varchar(100),Weight varchar(20),CreatedBy varchar(20));
+
+Insert INTO TeamCentreData values(1231,'A','ABC.pdf', 234, 'D:/files/', 'ABC.pdf', 'ashish');
+insert into TeamCentreData values(1231,'A','ABC_Instruction.pdf',235,'D:/files/','ABC_Instruction.pdf','maneesh');
+insert into TeamCentreData values(1231,'A','ABC.prt',236,'D:/files/','ABC.prt','12g','surya');
+commit;
+
+SELECT 
+    '$$Document' AS DOCTYPE,
+    ContentName AS Name,
+    'wt.series.HarvardSeries' AS Series,
+    'ABC' AS Container_Organisation_Name,
+    'Product' AS ContainerType,
+    'ABC_Product' AS Container,
+    'ABC' AS Organization_Name,
+    '11/24/2024 10:57 AM' AS Created_Date,
+    '11/24/2024 10:57 AM' AS Modified_Date,
+    'ObjectNumber' AS ContentId,
+    '1' AS Batch_Id,
+    'wt.doc.WTDocumentMaster' AS WBMSourceDescription,
+    'WBMSourceIdentifier' AS SourceContentId
+FROM 
+    TeamCentreData;
+
+
+
+-------Assignment 3:
+create table TableA(
+ID varchar(20), 
+"Number" varchar(20), 
+"user" varchar(20));
+
+Insert into TableA values(1, 123, 'ashish');
+Insert into TableA values(2, 124, 'Priyanka');
+Insert into TableA values(3, 125, 'Sagar');
+Insert into TableA values(4, 126, 'Gauri');
+Insert into TableA values(5, 127, 'Sagar');
+Insert into TableA values(6, 128, 'Surya');
+commit;
+
+
+create table UserMappingA (
+"Source" varchar(20),
+"Target" varchar(20));
+
+Insert into UserMappingA values ('ashish', 123567);
+Insert into UserMappingA values ('Priyanka', 123568);
+Insert into UserMappingA values ('Sagar', 123569);
+Insert into UserMappingA values ('Gauri', 123570);
+Insert into UserMappingA values ('Maneesh', 123571);
+Insert into UserMappingA values ('Ashok', 123572);
+commit;
+
+select * from TableA;
+select * from UserMappingA;
+
+-----Query 1: Write a query to find user from Table A who don't exist in Source of UserMapping.
+select a. "user" from TableA a
+where a. "user" Not in (
+select um."Source"
+from UserMappingA um);
+
+-----Query 2: Update the user column of Table A with values from Target column of User mapping where user matches with Source.
+UPDATE TableA a
+SET a."user" = (
+    SELECT um."Target"
+    FROM UserMappingA um
+    WHERE a."user" = um."Source"
+);
+UPDATE TableA
+SET "user" = 'Surya'
+WHERE "user" IS NULL;
+
+select * from TableA;
+
